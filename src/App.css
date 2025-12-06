@@ -3,3 +3,9 @@
    /* background */
    background: #FBFAF9;
 }
+
+.content-wrapper {
+    position: relative;
+    width: 878px;
+    height: 138px;
+}
