@@ -1,0 +1,41 @@
+$blur-intensity: 1px; // Сила розмиття
+$glass-opacity: 0.1; // Прозорість фону самого "скла"
+$border-color: rgba(255, 255, 255, 0.9);
+
+
+.centeredWrapper {
+position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* Щоб бути поверх тексту */
+}
+
+.glassContainer {
+    /* Стилі для "скляної" плашки */
+    
+    /* 1. Напівпрозорий фон - щоб крізь нього було видно розмиття */
+    background: rgba(255, 255, 255, 0.6); 
+    
+    /* 2. Головний ефект - розмиття фону позаду плашки */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Для Safari */
+    
+    /* Інші стилі для краси */
+    border-radius: 16px; /* Закруглені кути */
+    padding: 10px 20px; /* Відступи навколо логотипу */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Легка тінь */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Тонка рамка для бліку */
+
+    /* Центруємо логотип всередині плашки */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoImage {
+    max-width: 250px;
+    height: auto;
+    display:block;
+}
+
